@@ -5,11 +5,6 @@ This code is intended to make an awesome [EvaporateJS](https://github.com/TTLabs
 
 ### Get started
 
-Install:
-```bash
-bower install --save angular-evaporate
-```
-
 Include files:
 ```html
 <script src="/bower_components/angular/angular.min.js"></script>
@@ -90,7 +85,7 @@ Add file input with the `evaporate` directive using previously mentioned `evaDat
 
 ### Run the example
 
-1. Clone the repo: `git clone https://github.com/uqee/angular-evaporate.git`
+1. Clone the repo: `git clone https://github.com/r0y3/angular-evaporate.git`
 2. Navigate into the project folder: `cd ./angular-evaporate`
 3. Install frontend deps: `bower install`
 4. Navigate into the example folder: `cd ./example`
