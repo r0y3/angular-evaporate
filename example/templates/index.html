@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>angular-evaporate demo</title>
+    <link rel="stylesheet" href="/static/index.css">
+  </head>
+  <body ng-app="app">
+    {% raw %}
+    <div ng-controller="AppCtrl">
+      <div ng-hide="evaData.ready">upload is not available</div>
+      <div ng-show="evaData.ready">
+        <input type="file" multiple="multiple" evaporate eva-model="evaData">
+        <ul>
+          <li ng-repeat="file in evaData.files">
+            <span>{{file.name}}</span>
+            <span ng-show="file.completed"> uploaded, <a ng-href="{{file.url}}" target="_blank">open it</a> in new tab</span>
+            <div class="progress" ng-hide="file.completed">
+              <div class="progress-indicator" style="width: {{file.progress}}%;"></div>
+              <div class="progress-value">
+                <span>{{file.progress || 0}}%</span>
+                <span ng-show="file.timeLeft">({{file.timeLeft}} seconds left)</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    {% endraw %}
+
+    <!-- angular.js -->
+    <script src="/static/bower_components/angular/angular.min.js"></script>
+
+    <script src="/static/bower_components/angular-slugify/angular-slugify.js"></script>
+
+    <!-- evaporate.js itself should be included before the angular-evaporate module -->
+    <script src="/static/bower_components/evaporatejs/evaporate.js"></script>
+
+    <!-- angular-evaporate module -->
+    <script src="/static/lib/angular-evaporate.js"></script>
+
+    <!-- your app module -->
+    <script src="/static/index.js"></script>
+  </body>
+</html>

@@ -11,15 +11,17 @@
   "authors": [
     "Denis Zhbankov",
     "Marvin Killing",
-    "Eugene Khashin"
+    "Eugene Khashin",
+    "Roy Evangelista"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/uqee/angular-evaporate.git"
+    "url": "https://github.com/r0y3/angular-evaporate.git"
   },
   "dependencies": {
     "angular": "1.x",
-    "evaporatejs": "*"
+    "evaporatejs": "*",
+    "angular-slugify": "https://github.com/paulsmith/angular-slugify.git#eff9ecc3c1234c9dd22bed8b647508f19d25c978"
   },
   "main": [
     "lib/angular-evaporate.js"
@@ -32,5 +34,5 @@
     "tests"
   ],
   "license": "MIT",
-  "homepage": "http://github.com/uqee/angular-evaporate"
-} 
+  "homepage": "http://github.com/r0y3/angular-evaporate"
+}
